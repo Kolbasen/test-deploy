@@ -4,10 +4,10 @@ services:
     build:
       context: .
       args:
-        PORT: 80
+        PORT: 443
     environment:
       # INLINE_RUNTIME_CHUNK: "false"
-      PORT: 80
+      PORT: 443
     ports:
       - "80:80"
       - "443:443"
