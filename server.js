@@ -44,6 +44,10 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, `${buildPath}/index.html`));
 });
 
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, `${buildPath}/index.html`));
+  });
+
 // ################### catch 404 and forward to error handler
 app.use((req, res, next) => {
   const err = new Error('Not Found');
