@@ -1,0 +1,15 @@
+version: '3'
+services:
+  application:
+    build:
+      context: .
+      args:
+        PORT: 80
+    environment:
+      # INLINE_RUNTIME_CHUNK: "false"
+      PORT: 80
+    ports:
+      - "80:80"
+      - "443:443"
+    stdin_open: true
+    restart: always
